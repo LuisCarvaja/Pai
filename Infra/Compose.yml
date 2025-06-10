@@ -13,6 +13,8 @@ services:
       - PYTHONUNBUFFERED=1
     depends_on:
       - frontend
+    env_file:
+      - ../Backend/.env
 
   frontend:
     build:
