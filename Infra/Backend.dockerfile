@@ -6,7 +6,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copiar archivos del backend
-COPY ../backend /app
+COPY ../Backend /app
 
 # Instalar dependencias
 RUN pip install --upgrade pip \

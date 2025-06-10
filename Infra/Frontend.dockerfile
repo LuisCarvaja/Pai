@@ -1,18 +1,14 @@
-# frontend.Dockerfile
-
 FROM node:20
 
-# Crear directorio de trabajo
 WORKDIR /app
 
-# Copiar archivos del frontend
-COPY ../frontend /app
 
-# Instalar dependencias y construir (para Vite o React CRA)
+COPY Frontend/package*.json ./
+
 RUN npm install
 
-# Exponer puerto de desarrollo
-EXPOSE 3000
+COPY . .
 
-# Comando por defecto
-CMD ["npm", "run", "dev"]
+EXPOSE 5173
+
+CMD ["npm", "run", "dev", "--", "--host", "--port", "5173"]

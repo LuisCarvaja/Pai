@@ -4,11 +4,11 @@ services:
   backend:
     build:
       context: ..
-      dockerfile: infra/backend.Dockerfile
+      dockerfile: infra/Backend.Dockerfile
     ports:
       - "8000:8000"
     volumes:
-      - ../backend:/app
+      - ../Backend:/app
     environment:
       - PYTHONUNBUFFERED=1
     depends_on:
@@ -17,10 +17,10 @@ services:
   frontend:
     build:
       context: ..
-      dockerfile: infra/frontend.Dockerfile
+      dockerfile: infra/Frontend.Dockerfile
     ports:
-      - "3000:3000"
+      - "5173:5173"
     volumes:
-      - ../frontend:/app
+      - ../Frontend:/app
     stdin_open: true
     tty: true
