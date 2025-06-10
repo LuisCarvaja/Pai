@@ -2,3 +2,5 @@ Django>=4.2
 stripe
 djangorestframework
 django-cors-headers
+stripe
+python-dotenv

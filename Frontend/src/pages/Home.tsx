@@ -1,5 +1,12 @@
+import SubscribeForm from "../components/SubscribeForm"
+
 function Home() {
-  return <h1>Formulario de suscripción</h1>;
+  return (
+      <main>
+      <h1>Bienvenido</h1>
+      <SubscribeForm />
+    </main>
+  )
 }
 
 export default Home;
