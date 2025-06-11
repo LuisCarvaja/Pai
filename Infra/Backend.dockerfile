@@ -15,5 +15,5 @@ RUN pip install --upgrade pip \
 # Exponer puerto de Django
 EXPOSE 8000
 
-# Comando por defecto
+
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
